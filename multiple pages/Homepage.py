@@ -1,4 +1,5 @@
 import streamlit as st
+from PIL import Image
 
 st.set_page_config(
     page_title="Multiple Page",
@@ -7,6 +8,9 @@ st.set_page_config(
 
 st.title("UJI COBA")
 st.sidebar.success("result")
+
+image = Image.open('img/coba.png')
+st.image(image, width=700, caption='Halo Tes Satu Dua Tiga')
 
 if "my_input" not in st.session_state:
     st.session_state["my_input"] = ""
